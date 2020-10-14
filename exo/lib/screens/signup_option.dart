@@ -38,15 +38,18 @@ class SignupOption extends StatelessWidget {
                 ),
               ],
             ),
-            child: Center(
-              child: Text(
-                "S'inscrire",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF1C1C1C),
+            child: FlatButton(
+                onPressed: () {  },
+                child: Center(
+                child: Text(
+                  "S'inscrire",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF1C1C1C),
+                    ),
                   ),
-                ),
+              ),
             ),
           ), 
       ],
@@ -54,3 +57,6 @@ class SignupOption extends StatelessWidget {
     );
   }
 }
+
+
+//https://www.youtube.com/playlist?list=PLRNSfzJHcy9FqWhylxQO0ebzcEkpI_ZwO

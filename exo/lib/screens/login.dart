@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+// ignore: unused_import
+import 'package:url_launcher/url_launcher.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -83,7 +86,7 @@ class Login extends StatelessWidget {
 
           SizedBox(height: 24),
 
-          Container(
+          /*Container(
             height: 40,
             width: 20,
             decoration: BoxDecoration(
@@ -108,11 +111,42 @@ class Login extends StatelessWidget {
                   ),
                 ),
             ),
+          ),*/
+
+          Container(
+            height: 40,
+            width: 20,
+            decoration: BoxDecoration(
+              color: Color(0xFF1C1C1C),
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xFF1C1C1C).withOpacity(0.2),
+                  spreadRadius: 3,
+                  blurRadius: 4,
+                  offset: Offset(0, 3),
+                ),
+              ],
+            ),
+            child: FlatButton(
+              onPressed: (){}, 
+              child: Center(
+                child: Text(
+                  "Se connecter",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF3D657),
+                    ),
+                  ),
+              ),
+              ),
           ),
+          
 
           SizedBox(height: 16,),
 
-          Text(
+          /*Text(
             "Mot de passe oublié?",
             style: TextStyle(
               fontSize: 18,
@@ -120,7 +154,19 @@ class Login extends StatelessWidget {
               color: Color(0xFF1C1C1C),
               height: 1,
             ),
-          ),
+          ),*/
+
+          SelectableLinkify(
+            text: "Mot de passe oublié?",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Color(0xFF1C1C1C),
+              height: 1,
+            ),
+            ),
+
+         
       ],
       
     );

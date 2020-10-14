@@ -93,15 +93,18 @@ class SignUp extends StatelessWidget {
                 ),
               ],
             ),
-            child: Center(
-              child: Text(
-                "S'inscrire",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF1C1C1C),
+            child: FlatButton(
+              onPressed: () {}, 
+              child: Center(
+                child: Text(
+                  "S'inscrire",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF1C1C1C),
+                    ),
                   ),
-                ),
+              ),
             ),
           ),
 
@@ -121,16 +124,17 @@ class SignUp extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget> [
-              Icon(
-                Entypo.facebook_with_circle,
-                size: 32,
-                color: Color(0xFFF3D657),
+              IconButton(
+               onPressed: () {  },
+                //size: 32,
+                color: Color(0xFFF3D657), 
+                icon: Icon( Entypo.facebook_with_circle, size: 32,), 
               ),
               SizedBox(width: 24),
-              Icon(
-                Entypo.google__with_circle,
-                size: 32,
-                color: Color(0xFFF3D657),
+              IconButton(
+                onPressed: () {  },
+               //size: 32,
+                color: Color(0xFFF3D657), icon: Icon(Entypo.google__with_circle, size: 32,),
               ),
             ],
           ),
